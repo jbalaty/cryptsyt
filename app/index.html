@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>cryptsyt</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- Building blocks -->
+  <link rel="stylesheet" href="bower_components/building-blocks/style/action_menu.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/buttons.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/confirm.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/edit_mode.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/headers.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/input_areas.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/status.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/switches.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/drawer.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/lists.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/progress_activity.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/scrolling.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/seekbars.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/tabs.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/style/toolbars.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="bower_components/building-blocks/icons/styles/action_icons.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/icons/styles/media_icons.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/icons/styles/comms_icons.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/icons/styles/settings_icons.css">
+
+  <!-- Transitions -->
+  <link rel="stylesheet" href="bower_components/building-blocks/transitions.css">
+
+  <!-- Util CSS: some extra tricks -->
+  <link rel="stylesheet" href="bower_components/building-blocks/util.css">
+  <link rel="stylesheet" href="bower_components/building-blocks/fonts.css">
+
+  <!-- Additional markup to make Building Blocks kind of cross browser -->
+  <link rel="stylesheet" href="bower_components/building-blocks/cross_browser.css">
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body>
+<section id="index" data-position="current">
+  <section data-type="sidebar">
+    <header>
+      <menu type="toolbar">
+        <a href="#">Done</a>
+      </menu>
+      <h1>Menu</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Markets</a></li>
+      </ul>
+      <h2>Bookmarks</h2>
+      <ul>
+        <li><a href="#">DOGE/BTC</a></li>
+        <li><a href="#">DOGE/LTC</a></li>
+        <li><a href="#">LTC/BTC</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="drawer" role="region">
+    <header class="fixed">
+      <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+      <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+
+      <h1>Building Blocks <em>demo</em></h1>
+    </header>
+    <article class="content scrollable header">
+      <div data-type="list">
+        <ul>
+          <li>
+            <a id="btn-action-menu" href="#">
+              <p>Action menu</p>
+            </a>
+          </li>
+          <li>
+            <a id="btn-buttons" href="#">
+              <p>Buttons</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+</section>
+
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/jquery.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({app,.tmp}) scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>

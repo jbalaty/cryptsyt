@@ -1,0 +1,9 @@
+{
+  "name": "cryptsyt",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "building-blocks":"https://github.com/buildingfirefoxos/Building-Blocks.git#591f23795330b6f9a5aed21e74e2210404f94123"
+  },
+  "devDependencies": {}
+}
