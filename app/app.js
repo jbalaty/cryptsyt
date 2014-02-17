@@ -10,5 +10,11 @@ var App = Ember.Application.extend({
   Resolver: Resolver['default']
 });
 
+// set global constants
+Ember.ControllerMixin.reopen({
+  GLOBAL_APPNAME:'Cryptsyt'
+});
+
+
 
 export default App;
