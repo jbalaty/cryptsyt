@@ -1,0 +1,18 @@
+{
+    "name": "Firefoxapp1",
+    "version": "0.1",
+    "description": "Firefox test app",
+    "launch_path": "/index.html",
+     "permissions": {
+       "storage": {
+         "description": "Required for storing anything."
+         }
+     },
+     "developer": {
+       "name": "Jiri Balaty"
+     },
+     "icons":{
+        "60": "/style/icons/icon_60.png",
+        "128": "/style/icons/icon_128.png"
+     }
+}

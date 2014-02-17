@@ -1,0 +1,25 @@
+<section id="drawer" role="region">
+  <header class="fixed">
+      {{#if showSidebar}}
+        <a href="#" {{ action 'hideSidebar' }}><span class="icon icon-menu">hide sidebar</span></a>
+      {{else}}
+        <a href="#" {{ action 'showSidebar' }}><span class="icon icon-menu">show sidebar</span></a>
+      {{/if}}
+
+    <h1>Cryptsy <em>show markets</em></h1>
+  </header>
+  <article class="content scrollable header">
+    <div data-type="list">
+      <ul>
+          {{#each market in this}}
+            <li>
+                {{#link-to 'market.trades' market}}
+                  <p>{{market.label}} &nbsp;<em>{{market.primary_currency_name}}
+                    / {{market.secondary_currency_name}}</em></p>
+                {{/link-to}}
+            </li>
+          {{/each}}
+      </ul>
+    </div>
+  </article>
+</section>

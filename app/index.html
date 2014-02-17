@@ -1,110 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>cryptsyt</title>
+  <title>App</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css styles/vendor.css -->
-  <!-- bower:css -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css(tmp/result) /assets/app.min.css -->
   <!-- Building blocks -->
-  <link rel="stylesheet" href="bower_components/building-blocks/style/action_menu.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/buttons.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/confirm.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/edit_mode.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/headers.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/input_areas.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/status.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/switches.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/drawer.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/lists.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/progress_activity.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/scrolling.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/seekbars.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/tabs.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/style/toolbars.css">
-
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/action_menu.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/buttons.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/confirm.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/edit_mode.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/headers.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/input_areas.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/status.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/switches.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/drawer.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/lists.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/progress_activity.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/scrolling.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/seekbars.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/tabs.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/style/toolbars.css">
   <!-- Icons -->
-  <link rel="stylesheet" href="bower_components/building-blocks/icons/styles/action_icons.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/icons/styles/media_icons.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/icons/styles/comms_icons.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/icons/styles/settings_icons.css">
-
+  <link rel="stylesheet" href="/vendor/Building-Blocks/icons/styles/action_icons.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/icons/styles/media_icons.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/icons/styles/comms_icons.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/icons/styles/settings_icons.css">
   <!-- Transitions -->
-  <link rel="stylesheet" href="bower_components/building-blocks/transitions.css">
-
+  <link rel="stylesheet" href="/vendor/Building-Blocks/transitions.css">
   <!-- Util CSS: some extra tricks -->
-  <link rel="stylesheet" href="bower_components/building-blocks/util.css">
-  <link rel="stylesheet" href="bower_components/building-blocks/fonts.css">
-
+  <link rel="stylesheet" href="/vendor/Building-Blocks/util.css">
+  <link rel="stylesheet" href="/vendor/Building-Blocks/fonts.css">
   <!-- Additional markup to make Building Blocks kind of cross browser -->
-  <link rel="stylesheet" href="bower_components/building-blocks/cross_browser.css">
-  <!-- endbower -->
+  <link rel="stylesheet" href="/vendor/Building-Blocks/cross_browser.css">
+  <link rel="stylesheet" href="/assets/app.css">
   <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- for more details visit: https://github.com/yeoman/grunt-usemin -->
+
+  <!-- build:js(tmp/result) /assets/config.min.js -->
+
+    <script src="/config/environment.js"></script>
+    <!-- @if tests=false -->
+
+      <!-- @if dist=false -->
+      <script src="/config/environments/development.js"></script>
+      <!-- @endif --><!-- @if dist=true -->
+      <script src="/config/environments/production.js"></script>
+      <!-- @endif -->
+
+    <!-- @endif --><!-- @if tests=true -->
+      <script src="/config/environments/test.js"></script>
+    <!-- @endif -->
+
   <!-- endbuild -->
+
+  <!-- build:js(tmp/result) /assets/vendor.min.js -->
+
+    <script src="/vendor/jquery/jquery.js"></script>
+
+    <!-- @if dist=false -->
+    <script src="/vendor/handlebars/handlebars.js"></script>
+    <script src="/vendor/ember/ember.js"></script>
+    <!-- @endif --><!-- @if dist=true -->
+    <script src="/vendor/handlebars/handlebars.runtime.js"></script>
+    <script src="/vendor/ember/ember.prod.js"></script>
+    <!-- @endif -->
+
+    <script src="/vendor/ember-data/ember-data.js"></script>
+    <script src="/vendor/loader.js"></script>
+    <script src="/vendor/ember-resolver/dist/ember-resolver.js"></script>
+    <script src="/vendor/ic-ajax/main.js"></script>
+    <script src="/vendor/moment/moment.js"></script>
+    <script src="/vendor/ember-localstorage-adapter/localstorage_adapter.js"></script>
+
+  <!-- endbuild -->
+
+  <!-- build:js(tmp/result) /assets/app.min.js -->
+
+    <script src="/assets/app.js"></script>
+    <script src="/assets/templates.js"></script>
+
+  <!-- endbuild -->
+
+  <!-- @if tests=true -->
+  <link rel="stylesheet" href="/vendor/qunit/qunit/qunit.css">
+  <script src="/vendor/qunit/qunit/qunit.js"></script>
+
+  <style>
+    #ember-testing-container {
+      position: absolute;
+      background: white;
+      bottom: 0;
+      right: 0;
+      width: 640px;
+      height: 384px;
+      overflow: auto;
+      z-index: 9999;
+      border: 1px solid #ccc;
+    }
+
+    #ember-testing {
+      zoom: 50%;
+    }
+  </style>
+  <!-- @endif -->
+
 </head>
 <body>
-<section id="index" data-position="current">
-  <section data-type="sidebar">
-    <header>
-      <menu type="toolbar">
-        <a href="#">Done</a>
-      </menu>
-      <h1>Menu</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Markets</a></li>
-      </ul>
-      <h2>Bookmarks</h2>
-      <ul>
-        <li><a href="#">DOGE/BTC</a></li>
-        <li><a href="#">DOGE/LTC</a></li>
-        <li><a href="#">LTC/BTC</a></li>
-      </ul>
-    </nav>
-  </section>
 
-  <section id="drawer" role="region">
-    <header class="fixed">
-      <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
-      <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+  <!-- @if tests=true -->
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="/tests/tests.js"></script>
+  <script src="/tests/test_helper.js"></script>
+  <script src="/tests/test_loader.js"></script>
+  <script src="/testem.js"></script>
+  <!-- @endif -->
 
-      <h1>Building Blocks <em>demo</em></h1>
-    </header>
-    <article class="content scrollable header">
-      <div data-type="list">
-        <ul>
-          <li>
-            <a id="btn-action-menu" href="#">
-              <p>Action menu</p>
-            </a>
-          </li>
-          <li>
-            <a id="btn-buttons" href="#">
-              <p>Buttons</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </article>
-  </section>
-</section>
+  <!-- @if tests=false -->
+  <script>
+    window.App = require('appkit/app')["default"].create();
+  </script>
+  <!-- @endif -->
 
-
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/jquery.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-
-<!-- build:js({app,.tmp}) scripts/main.js -->
-<script src="scripts/main.js"></script>
-<!-- endbuild -->
 </body>
 </html>

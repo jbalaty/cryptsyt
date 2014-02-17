@@ -1,0 +1,25 @@
+<section id="index" data-position="current">
+  <section data-type="sidebar">
+    <header>
+      <menu type="toolbar">
+        <a href="#" {{ action 'hideSidebar' }}>Done</a>
+      </menu>
+      <a href="#" {{ action 'hideSidebar' }}><h1>Menu</h1></a>
+    </header>
+    <nav>
+      <ul>
+        <li>{{#link-to 'index'}}Dashboard{{/link-to}}</li>
+        <li>{{#link-to 'markets'}}Markets{{/link-to}}</li>
+      </ul>
+      <h2>Bookmarks</h2>
+      <ul>
+          {{#each bookmarks}}
+            <li>{{#link-to 'market.trades' this.id}}{{this.label}}{{/link-to}}</li>
+          {{/each}}
+      </ul>
+    </nav>
+  </section>
+  <div id="drawer" role="region"  {{bind-attr class="showSidebar"}}>
+      {{outlet}}
+  </div>
+</section>

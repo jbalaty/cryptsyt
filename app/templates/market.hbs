@@ -1,0 +1,36 @@
+<section id="drawer" role="region">
+  <header class="fixed">
+      {{#if showSidebar}}
+        <a href="#" {{ action 'hideSidebar' }}><span class="icon icon-menu">hide sidebar</span></a>
+      {{else}}
+        <a href="#" {{ action 'showSidebar' }}><span class="icon icon-menu">show sidebar</span></a>
+      {{/if}}
+    <menu type="toolbar">
+      <a href="#" {{action 'refresh'}}><span class="icon action-icon-hack"><span
+              class="action-icon email-sync"></span></span></a>
+        {{#unless isBookmarked }}
+          <a href="#" {{action 'addBookmark' this}}><span class="icon action-icon-hack"><span
+                  class="action-icon bookmark"></span></span></a>
+        {{else}}
+          <a href="#" {{action 'removeBookmark' this}}><span class="icon action-icon-hack"><span
+                  class="action-icon bookmarked"></span></span></a>
+        {{/unless}}
+    </menu>
+    <h1>Cryptsy <em>{{label}} market</em></h1>
+  </header>
+  <article class="content scrollable header footer">
+    {{outlet}}
+  </article>
+  <ul role="tablist">
+    <li role="tab">
+      {{#link-to 'market.trades' this}}Trades{{/link-to}}
+    </li>
+    <li role="tab">
+        {{#link-to 'market.buy' this}}Sell orders{{/link-to}}
+    </li>
+    <li role="tab">
+        {{#link-to 'market.sell' this}}Buy orders{{/link-to}}
+    </li>
+  </ul>
+</section>
+

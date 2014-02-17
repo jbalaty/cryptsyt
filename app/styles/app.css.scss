@@ -1,0 +1,212 @@
+/* Put your CSS here */
+@keyframes domChanged { from { background: yellow; } }
+@-webkit-keyframes domChanged { from { background: yellow; } }
+.ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+
+
+
+#index {
+    height: 100%;
+}
+/*[data-position="right"] {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*transform: translateX(100%);*/
+    /*-webkit-transform: translateX(100%);*/
+    /*z-index: 15;*/
+    /*z-index: 100; *//* -> drawer */
+/*}*/
+/*section[role="region"][data-position="right"] {*/
+    /*position: absolute;*/
+/*}*/
+/*[data-position="right"].current {*/
+    /*animation: rightToCurrent 0.4s forwards;*/
+    /*-webkit-animation: rightToCurrent 0.4s forwards;*/
+/*}*/
+/*[data-position="right"].right {*/
+    /*animation: currentToRight 0.4s forwards;*/
+    /*-webkit-animation: currentToRight 0.4s forwards;*/
+/*}*/
+/*[data-position="current"].left {*/
+    /*animation: currentToLeft 0.4s forwards;*/
+    /*-webkit-animation: currentToLeft 0.4s forwards;*/
+/*}*/
+/*[data-position="current"].current {*/
+    /*animation: leftToCurrent 0.4s forwards;*/
+    /*-webkit-animation: leftToCurrent 0.4s forwards;*/
+/*}*/
+/*[data-position="back"] {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*z-index: -1;*/
+    /*opacity: 0;*/
+    /* z-index: 100; -> drawer */
+/*}*/
+/*[data-position="back"].fade-in {*/
+    /*z-index: 120;*/
+    /*animation: fadeIn 0.2s forwards;*/
+    /*-webkit-animation: fadeIn 0.2s forwards;*/
+/*}*/
+/*[data-position="back"].fade-out {*/
+    /*animation: fadeOut 0.2s forwards;*/
+    /*-webkit-animation: fadeOut 0.2s forwards;*/
+/*}*/
+
+/*[data-position="edit-mode"] {*/
+    /*position: absolute;*/
+    /*top: -5rem;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: -7rem;*/
+    /*z-index: -1;*/
+    /*opacity: 0;*/
+    /*transition: all 0.3s ease;*/
+/*}*/
+/*[data-position="edit-mode"].edit {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*z-index: 120;*/
+    /*opacity: 1;*/
+/*}*/
+
+/* Headers */
+/*#headers section[role="region"] {*/
+    /*margin-bottom: 1.5rem;*/
+/*}*/
+/*#headers section[role="region"]:not(#drawer) {*/
+    /*display: inline;*/
+/*}*/
+/*#headers article header:first-child {*/
+    /*margin-top: 1.5rem;*/
+/*}*/
+/*#headers section[role="region"] header h2 {*/
+    /*margin: 0 0 1.5rem 0;*/
+/*}*/
+
+/* Lists */
+/* to avoid double background effect on press */
+/*[data-type=list] li>a:active {*/
+    /*background-color: transparent;*/
+/*}*/
+
+/* Drawer */
+/*section[role="region"]:not(#drawer) {*/
+    /*transition: none;*/
+    /*left: 0;*/
+    /*z-index: 0;*/
+    /*padding-left: 0;*/
+/*}*/
+/*section[data-type="sidebar"] + section[role="region"] > header:first-child > button,*/
+/*section[data-type="sidebar"] + section[role="region"] > header:first-child > a {*/
+    /*background-position: 3.5rem center;*/
+/*}*/
+
+/* Switches */
+/*#switches label:last-child {*/
+    /*margin-left: 2rem;*/
+/*}*/
+
+/* Scrolling */
+/*nav[data-type="scrollbar"] {*/
+    /*padding-top: 1rem;*/
+/*}*/
+/*nav[data-type="scrollbar"] p {*/
+    /*opacity: 1;*/
+/*}*/
+
+/* Seek bars */
+/*div[role="slider"] > label.icon {*/
+    /*background: no-repeat right top;*/
+    /*background-size: 3rem auto;*/
+/*}*/
+
+/* Tabs */
+/*#tabs .content {*/
+    /*padding: 0;*/
+/*}*/
+/*#tabs .content .content {*/
+    /*padding: 1.5rem 3rem;*/
+/*}*/
+
+/* Filters */
+/*[role="tablist"][data-type="filter"] {*/
+    /*margin-bottom: 2rem;*/
+/*}*/
+
+/*.bottom[role="tablist"][data-type="filter"] {*/
+    /*bottom: auto;*/
+/*}*/
+
+/* Device rotation */
+.landscape section[role="region"]#drawer > header:first-child {
+    /* Whatever needs to be changed on landscape */
+}
+
+/* custom styles */
+body > .ember-view {
+    height:100%;
+}
+
+div[role="region"] {
+    width: 100%;
+    transition: all 0.25s ease;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    margin:0px;
+    padding:0px;
+}
+
+section[role="region"] > header:first-child .icon.icon-refresh {
+    background-image: url(/assets/icons/reply-all.png);
+}
+section[role="region"] > header:first-child .icon.icon-bookmark {
+    background-image: url(/assets/icons/reply-all.png);
+}
+
+.action-icon-hack {
+    padding-top:8px;
+  .action-icon:before {
+    left:0px;
+  }
+}
+
+.show-sidebar{
+    transform: translateX(80%);
+    -webkit-transform: translateX(80%);
+}
+.Sell {
+    color:red;
+}
+.Buy {
+    color:green;
+}
+.loading {
+    text-align: center;
+}
+
+article.footer {
+  border-bottom: transparent solid 4.7rem;
+}
+
+[role="tab"]>a.active {
+//  display: inline-block;
+//  content: "";
+//  position: absolute;
+//  width: 100%;
+//  left: 0;
+//  height: calc(100% - 0.3rem);
+  border-bottom: 0.3rem solid rgba(0,202,242, 0.75);
+  background-color:rgba(0,202,242, 0.75);
+  color:white;
+}
+

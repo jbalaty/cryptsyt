@@ -1,0 +1,17 @@
+<div>
+  <p>graf</p>
+</div>
+<div data-type="list">
+  <ul>
+      {{#each}}
+        <li><a>
+          <p>
+                <span {{bind-attr class="this.initiate_ordertype"}}>{{this.initiate_ordertype}}
+                  - {{this.tradeprice}}</span>
+          </p>
+
+          <p>{{format-datetime this.datetime}} - QTY: {{this.quantity}}</p>
+        </a></li>
+      {{/each}}
+  </ul>
+</div>

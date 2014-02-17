@@ -1,0 +1,38 @@
+<section id="drawer" role="region">
+  <header class="fixed">
+      {{#if showSidebar}}
+        <a href="#" {{ action 'hideSidebar' }}><span class="icon icon-menu">hide sidebar</span></a>
+      {{else}}
+        <a href="#" {{ action 'showSidebar' }}><span class="icon icon-menu">show sidebar</span></a>
+      {{/if}}
+    <h1>Cryptsy <em>settings</em></h1>
+  </header>
+  <article class="content scrollable header" data-type="list">
+    <header>Cryptsy account</header>
+    <ul>
+      <li>
+        <p>API key</p>
+      </li>
+      <li>
+        <p>API secret</p>
+      </li>
+      <li>
+          <p>Travis Gray</p>
+
+          <p>Beginning of message</p>
+      </li>
+    </ul>
+    <header>Markets</header>
+    <ul>
+      <li>
+        <p>Travis Gray</p>
+        <p>Disabled item</p>
+      </li>
+    </ul>
+
+  </article>
+</section>
+
+
+
+

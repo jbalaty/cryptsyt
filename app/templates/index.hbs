@@ -1,0 +1,25 @@
+<section id="drawer" role="region">
+  <header class="fixed">
+      {{#if showSidebar}}
+        <a href="#" {{ action 'hideSidebar' }}><span class="icon icon-menu">hide sidebar</span></a>
+      {{else}}
+        <a href="#" {{ action 'showSidebar' }}><span class="icon icon-menu">show sidebar</span></a>
+      {{/if}}
+    <h1>Cryptsy <em>dashboard</em></h1>
+  </header>
+  <article class="content scrollable header">
+    <p>This is Cryptsy demo app</p>
+
+    <p>{{#link-to 'markets'}}go to markets list{{/link-to}}</p>
+
+    <p><a href="http://www.cryptsy.com">Cryptsy</a></p>
+
+    <p>{{#link-to 'helper-test'}}helpers{{/link-to}}</p>
+
+    <p>{{#link-to 'component-test'}}components{{/link-to}}</p>
+  </article>
+</section>
+
+
+
+
