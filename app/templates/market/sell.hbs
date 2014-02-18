@@ -1,3 +1,13 @@
-<p>
-  sell
-</p>
+<div data-type="list">
+  <ul>
+      {{#each}}
+        <li><a>
+          <p>
+                <span >{{this.order_type}} - {{this.price}}</span>
+          </p>
+
+          <p>QTY: {{this.quantity}} - TOTAL(BTC): {{this.total}}</p>
+        </a></li>
+      {{/each}}
+  </ul>
+</div>

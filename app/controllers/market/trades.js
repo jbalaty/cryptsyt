@@ -2,7 +2,6 @@ export default
 Ember.ArrayController.extend({
   needs: ['market'],
   market: Ember.computed.alias("controllers.market"),
-  market_trades: null,
 
   refresh: function () {
     this.set('content', []);

@@ -13,7 +13,7 @@ Ember.Route.extend({
   },
   actions: {
     refresh: function () {
-      this.controllerFor('market.trades').refresh();
+      this.controllerFor(this.controller.get('lastChildRoute')).refresh();
     }
   }
 });
