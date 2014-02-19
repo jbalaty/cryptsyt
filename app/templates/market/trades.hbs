@@ -1,5 +1,5 @@
 <div>
-  <p>graf</p>
+  {{view 'graph' data=data categories=categories}}
 </div>
 <div data-type="list">
   <ul>
@@ -7,7 +7,7 @@
         <li><a>
           <p>
                 <span {{bind-attr class="this.initiate_ordertype"}}>{{this.initiate_ordertype}}
-                  - {{this.tradeprice}}</span>
+                  - {{format-price this.tradeprice }}</span>
           </p>
 
           <p>{{format-datetime this.datetime}} - QTY: {{this.quantity}}</p>
