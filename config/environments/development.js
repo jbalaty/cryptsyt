@@ -5,3 +5,4 @@
 //
 // window.ENV.public_key = '123456'
 window.ENV.api_url = 'http://localhost:3000/api'
+

@@ -1,3 +1,3 @@
 export default DS.RESTAdapter.extend({
-  host: 'http://localhost:3000/api'
+  host: window.ENV.api_url
 });

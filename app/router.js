@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('sell');
   });
   this.route('settings');
+  this.route('feedback');
 });
 
 export default Router;

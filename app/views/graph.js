@@ -9,11 +9,11 @@ Ember.View.extend({
 
   didInsertElement: function () {
     var graph = new GraphController();
-    graph.initGraph(this.get('elementId'), this.get('data'), this.get('categories'), this.get('title'))
+    graph.initGraph(this.get('elementId'), this.get('data'), this.get('categories'), this.get('title'));
     this.set('graphController',graph);
   },
 
   refresh:function(){
-    this.get('graphController').refresh();
+    this.get('graphController').refresh(this.get('data'), this.get('categories'), this.get('title'));
   }.observes('data.@each','categories.@each')
 });

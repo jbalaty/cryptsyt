@@ -8,5 +8,9 @@ Ember.ObjectController.extend({
     var id = this.get('model.id');
     var bm = this.get('bookmarks').findBy('id', id);
     return !!bm
-  }.property('controllers.application.bookmarks.@each', 'model')
+  }.property('controllers.application.bookmarks.@each', 'model'),
+
+  cryptsyLink: function () {
+    return 'https://www.cryptsy.com/markets/view/' + this.get('marketid');
+  }.property('model')
 });

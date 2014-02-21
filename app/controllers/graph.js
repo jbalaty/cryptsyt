@@ -1,3 +1,14 @@
+function graph_datetime_formatter(format) {
+  try {
+    var value = this.value;
+    var format = format || 'HH:mm';
+    return moment(value).format(format);
+  }
+  catch (e) {
+    return this.value;
+  }
+}
+
 var GraphConfig = Ember.Object.create({
   chart: null,
   renderToId: null,
@@ -13,10 +24,16 @@ var GraphConfig = Ember.Object.create({
       type: this.get('chartType')
     };
     xAxis = {
+      type: 'datetime',
       categories: this.get('categories'),
-      gridLineWidth:0,
-      tickLength:10,
-      tickInterval:7
+      gridLineWidth: 0,
+      tickLength: 10,
+      tickInterval: 10,
+//      dateTimeLabelFormats: '%H:%M'
+      labels: {
+        enabled: true,
+        formatter: graph_datetime_formatter
+      }
     };
     title = {
       text: this.get('title')
@@ -76,9 +93,10 @@ Ember.ObjectController.extend({
     var h = new Highcharts.Chart(graph);
     this.set('highcharts', h);
   },
-  refresh: function () {
+  refresh: function (data, categories, title) {
     console.log('refreshing graph');
-    this.get('highcharts').series[0].update(this.get('data'));
+    this.get('highcharts').series[0].update(data[0]);
+    this.get('highcharts').xAxis[0].update({categories: categories});
     this.get('highcharts').redraw();
   }
 });

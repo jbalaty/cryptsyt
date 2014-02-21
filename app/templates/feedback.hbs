@@ -1,0 +1,36 @@
+<section id="drawer" role="region">
+  <header class="fixed">
+      {{#if showSidebar}}
+        <a href="#" {{ action 'hideSidebar' }}><span class="icon icon-menu">hide sidebar</span></a>
+      {{else}}
+        <a href="#" {{ action 'showSidebar' }}><span class="icon icon-menu">show sidebar</span></a>
+      {{/if}}
+    <h1>{{GLOBAL_APPNAME}} <em>user feedback</em></h1>
+  </header>
+  <article class="content scrollable header" data-type="list">
+    <!--<header>Vote for features</header>-->
+    <!--<li>-->
+    <!--<p>Travis Gray</p>-->
+    <!--<p>Beginning of message</p>-->
+    <!--</li>-->
+    <!--</ul>-->
+      {{#unless showThankYouMessage}}
+        <header>Let us know</header>
+        <p>
+            {{textarea value=input}}
+        </p>
+        <a class="recommend" role="button" {{action 'submit'}}>Send</a>
+      {{else}}
+        <p class="text-center">
+
+        <h1 class="text-center">Thank you</h1></p>
+        <p class="text-center">
+            {{#link-to 'index'}}Go to dashboard{{/link-to}}
+        </p>
+      {{/unless}}
+  </article>
+</section>
+
+
+
+

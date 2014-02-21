@@ -215,3 +215,27 @@ article.footer {
   height:300px;
 }
 
+.text-center, p.text-center {
+  text-align:center;
+}
+
+// CUSTOM THEME
+section[role="region"] > header:first-child h1, section[role="region"] > header:first-child {
+  background-color: #408EC6;
+}
+
+[role="tab"] > a.active {
+  background-color: #408EC6;
+}
+
+section[role="region"] > header:first-child .icon.icon-menu {
+  background-image: url('/assets/icons/menu@2x.png');
+}
+
+[data-type="list"].active li:active:after, [data-type="list"].active li:hover:after, [data-type="list"] li > a:active:after, [data-type="list"] li > a:hover:after {
+  background-color: rgba(47,159,215,0.3);
+}
+
+button.recommend, a[role="button"].recommend {
+  color:white;
+}
