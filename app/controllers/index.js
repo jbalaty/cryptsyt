@@ -1,11 +1,5 @@
 export default
-Ember.Controller.extend({
+Ember.ArrayController.extend({
   needs: ['application'],
-  showSidebar: Ember.computed.alias('controllers.application.showSidebar'),
-  init: function () {
-
-  },
-  refreshTweets: function () {
-
-  }
+  showSidebar: Ember.computed.alias('controllers.application.showSidebar')
 });

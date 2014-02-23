@@ -6,13 +6,14 @@
         <a href="#" {{ action 'showSidebar' }}><span class="icon icon-menu">show sidebar</span></a>
       {{/if}}
 
-    <h1>{{GLOBAL_APPNAME}} <em>show markets</em></h1>
+    <h1>{{GLOBAL_APPNAME}} <em>markets</em></h1>
   </header>
   <article class="content scrollable header">
     <div data-type="list">
       <ul>
           {{#each market in this}}
-            <li>
+            <li {{bind-attr class="market.secondary_currency_code"}}>
+              {{getColor}}
                 {{#link-to 'market.trades' market}}
                   <p>{{market.label}} &nbsp;<em>{{market.primary_currency_name}}
                     / {{market.secondary_currency_name}}</em></p>

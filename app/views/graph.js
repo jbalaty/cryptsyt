@@ -14,6 +14,9 @@ Ember.View.extend({
   },
 
   refresh:function(){
-    this.get('graphController').refresh(this.get('data'), this.get('categories'), this.get('title'));
+    var graph = this.set('graphController',graph);
+    graph.destroyGraph();
+    graph.initGraph(this.get('elementId'), this.get('data'), this.get('categories'), this.get('title'));
+//    this.get('graphController').refresh(this.get('data'), this.get('categories'), this.get('title'));
   }.observes('data.@each','categories.@each')
 });

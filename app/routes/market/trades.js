@@ -8,10 +8,10 @@ Ember.Route.extend({
   setupController: function (controller, model) {
     controller.set('model', model);
     var market = this.get('market');
-    this.store.find('candlestick', {marketid: market.get('marketid'), interval_seconds: 900})
-        .then(function (data) {
-          controller.set('candlesticks', data);
-        });
+//    this.store.find('candlestick', {marketid: market.get('marketid'), interval_seconds: 60})
+//        .then(function (data) {
+//          controller.set('candlesticks', data);
+//        });
   },
   activate: function () {
     var controller = this.controllerFor('market');

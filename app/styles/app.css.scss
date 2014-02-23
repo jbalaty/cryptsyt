@@ -1,7 +1,7 @@
 /* Put your CSS here */
-@keyframes domChanged { from { background: yellow; } }
-@-webkit-keyframes domChanged { from { background: yellow; } }
-.ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+//@keyframes domChanged { from { background: yellow; } }
+//@-webkit-keyframes domChanged { from { background: yellow; } }
+//.ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
 
 
 
@@ -238,4 +238,19 @@ section[role="region"] > header:first-child .icon.icon-menu {
 
 button.recommend, a[role="button"].recommend {
   color:white;
+}
+
+[data-type="list"] li {
+  margin-top:2px;
+  margin-bottom:2px;
+}
+
+li.BTC {
+  border-left: 2px solid orange;
+}
+li.LTC {
+  border-left: 2px solid blue;
+}
+li.XPM {
+  border-left: 2px solid green;
 }

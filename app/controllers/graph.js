@@ -93,11 +93,15 @@ Ember.ObjectController.extend({
     var h = new Highcharts.Chart(graph);
     this.set('highcharts', h);
   },
+  destroyGraph:function(){
+    this.get('highcharts').destroy();
+  },
   refresh: function (data, categories, title) {
     console.log('refreshing graph');
     this.get('highcharts').series[0].update(data[0]);
     this.get('highcharts').xAxis[0].update({categories: categories});
     this.get('highcharts').redraw();
+    this.get('highcharts').reflow();
   }
 });
 

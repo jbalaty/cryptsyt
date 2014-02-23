@@ -1,18 +1,13 @@
 {
-    "name": "Firefoxapp1",
+    "name": "Cryptsyt",
     "version": "0.1",
-    "description": "Firefox test app",
+    "description": "Basic information from Cryptsy digital coins exchange",
     "launch_path": "/index.html",
-     "permissions": {
-       "storage": {
-         "description": "Required for storing anything."
-         }
-     },
      "developer": {
-       "name": "Jiri Balaty"
+       "name": "Jiří Balatý"
      },
      "icons":{
-        "60": "/style/icons/icon_60.png",
-        "128": "/style/icons/icon_128.png"
+        "60": "/assets/main_icon.png",
+        "128": "/assets/main_icon_128.png"
      }
 }

@@ -13,4 +13,5 @@ Ember.ObjectController.extend({
   cryptsyLink: function () {
     return 'https://www.cryptsy.com/markets/view/' + this.get('marketid');
   }.property('model')
+
 });
